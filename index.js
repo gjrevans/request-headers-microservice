@@ -2,9 +2,11 @@
 
 // Import our needed packages & create the express server
 var express = require('express');
+let favicon = require('serve-favicon');
 var server = express();
 
-var port = process.env.PORT || 8000;
+// Serve our Favicon
+server.use(favicon(__dirname + '/public/favicon.ico'));
 
 // Middleware to allow cross origin requests
 server.use(function(req, res, next) {
@@ -68,7 +70,9 @@ server.get('/api/whoami', function(req,res) {
     res.send(userInfo);
 });
 
+
 // Listen on the provided port
+var port = process.env.PORT || 8000;
 server.listen(port, function () {
     console.log('Listening on port ' + port)
 });
