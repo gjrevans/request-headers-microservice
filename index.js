@@ -13,6 +13,17 @@ server.use(function(req, res, next) {
   next();
 });
 
+// Gives us access to the public foder
+server.use(express.static(__dirname + '/public'));
+
+// Route provides an intro page at the root of the project
+server.get('/', function(req, res) {
+    res.sendFile('index.html', function(err){
+        if(err) {
+            console.log(err.status);
+        }
+    });
+});
 
 function getUserBrowser(userAgent) {
     var software = {};
@@ -40,7 +51,8 @@ function getUserBrowser(userAgent) {
 
     return software
 }
-// Return a JSON of the requesters data
+
+// Route returns a JSON of the requesters data
 server.get('/api/whoami', function(req,res) {
     // Get the user browser information
     var software = getUserBrowser(req.headers['user-agent'])

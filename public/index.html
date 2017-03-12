@@ -24,16 +24,17 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1>Timestamp Microservice</h1>
-                <p>Ever wanted to be able to convert a UNIX time a natural time or vice versa, who hasn't!?</p>
-                <p>You're in luck, this handy timestamp microservice accepts a either a natural time or UNIX time and will return a JSON object of both values. If an unrecognized date format is provided the API will return null for both values in the object.</p>
+            <div class="col-md-12 text-center">
+                <h1>Request Header Microservice</h1>
+                <p>So you're sitting there dying to know your IP address or perhaps you'd always wanted to know what software you were currently using or your browser language.</p>
+                <p>Look no further, our request header parser service is here to save the day!</p>
+
                 <h3>Example Useage</h3>
-                <code>https://timestamp-app-api.herokuapp.com/December%2015,%202015</code>
-                <br>
-                <code>https://timestamp-app-api.herokuapp.com/1450137600</code>
+                <code>https://gjrevans-request-headers.herokuapp.com/api/whoami</code>
                 <h3>Example output:</h3>
-                <code>{ "unix": 12345678, "natural": "January 12, 3456" }</code>
+                <code>{ "ipAddress": "::ffff:10.16.187.240", "laguage": "en-US", "software": {Mac: "10.12.3"} }</code>
+                <br><br>
+                <a href="/api/whoami" class="btn btn-default" target="_blank">Get My info</a>
                 <hr />
                 <div class="text-center">
                     <a href="https://gjrevans.com" target="_blank"><i class="fa fa-user fa-fw fa-3x"></i></a>
