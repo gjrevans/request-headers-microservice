@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Timestamp Microservice</title>
+    <meta name="description" content="Timestamp Microservice">
+    <meta name="author" content="Gordon Evans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/main.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Timestamp Microservice</h1>
+                <p>Ever wanted to be able to convert a UNIX time a natural time or vice versa, who hasn't!?</p>
+                <p>You're in luck, this handy timestamp microservice accepts a either a natural time or UNIX time and will return a JSON object of both values. If an unrecognized date format is provided the API will return null for both values in the object.</p>
+                <h3>Example Useage</h3>
+                <code>https://timestamp-app-api.herokuapp.com/December%2015,%202015</code>
+                <br>
+                <code>https://timestamp-app-api.herokuapp.com/1450137600</code>
+                <h3>Example output:</h3>
+                <code>{ "unix": 12345678, "natural": "January 12, 3456" }</code>
+                <hr />
+                <div class="text-center">
+                    <a href="https://gjrevans.com" target="_blank"><i class="fa fa-user fa-fw fa-3x"></i></a>
+                    <a href="https://github.com/gjrevans" target="_blank"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                    <a href="https://twitter.com/gjrevans" target="_blank"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

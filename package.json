@@ -1,0 +1,14 @@
+{
+  "name": "header-microservice",
+  "version": "1.0.0",
+  "description": "A header microservice the returns the users basic header information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gordon Evans",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
